@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ürün Satışı</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table border="0" class="table">
+                    <th colspan="6">
+                        <h1 class="text-danger text-center">
+                            Satış Bölümü
+                        </h1>
+                    </th>
+                    <tr>
+                        <td>
+                            <label for="applebox"><img class="shadow p-2 rounded rounded-circle" src="Icons/apple.png"
+                                    alt=""></label>
+                        </td>
+                        <td>
+                            <label for="apricotbox"><img id="apricot" class="shadow p-2 rounded rounded-circle"
+                                    src="Icons/apricot.png" alt=""></label>
+                        </td>
+                        <td>
+                            <label for="grapebox"><img id="grape" class="shadow p-2 rounded rounded-circle"
+                                    src="Icons/grape.png" alt=""></label>
+                        </td>
+                        <td>
+                            <label for="orangebox"><img id="orange" class="shadow p-2 rounded rounded-circle"
+                                    src="Icons/orange.png" alt=""></label>
+                        </td>
+                        <td>
+                            <label for="pearbox"><img id="pear" class="shadow p-2 rounded rounded-circle"
+                                    src="Icons/pear.png" alt=""></label>
+                        </td>
+                        <td>
+                            <label for="watermelonbox"><img id="watermelon" class="shadow p-2 rounded rounded-circle"
+                                    src="Icons/watermelon.png" alt=""></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <center><label for="applebox">
+                                        <h4 class="text-center mt-3 btn btn-outline-primary shadow-lg">
+                                            <center>5 TL</center>
+                                        </h4><br>
+                                    </label><br></center>
+                                <center><input type="checkbox" name="" value="5" id="applebox"></center>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <center><label for="apricotbox">
+                                        <h4 class="text-center mt-3 btn btn-outline-primary shadow-lg">
+                                            <center>7 TL</center>
+                                        </h4><br>
+                                    </label><br></center>
+                                <center><input type="checkbox" name="" value="7" id="apricotbox"></center>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <center><label for="grapebox">
+                                        <h4 class="text-center mt-3 btn btn-outline-primary shadow-lg">
+                                            <center>10 TL </center>
+                                        </h4><br>
+                                    </label><br></center>
+                                <center><input type="checkbox" name="" value="10" id="grapebox"></center>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <center><label for="orangebox">
+                                        <h4 class="text-center mt-3 btn btn-outline-primary shadow-lg">
+                                            <center>3 TL</center>
+                                        </h4><br>
+                                    </label><br></center>
+                                <center><input type="checkbox" name="" value="3" id="orangebox"></center>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <center><label for="pearbox">
+                                        <h4 class="text-center mt-3 btn btn-outline-primary shadow-lg">
+                                            <center>6 TL</center>
+                                        </h4><br>
+                                    </label><br></center>
+                                <center> <input type="checkbox" name="" value="6" id="pearbox"></center>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <center><label for="watermelonbox">
+                                        <h4 class="text-center mt-3 btn btn-outline-primary shadow-lg">4 TL</h4><br>
+                                    </label><br></center>
+                                <center><input type="checkbox" name="" value="4" id="watermelonbox"></center>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <form class="was-validated">
+                            <td>
+                                <input class="form-control" type="number" onchange="appleTutar()" name=""
+                                    id="appleNumber" min="0" maxlength="2" placeholder="Apple Miktar Giriniz (kg)">
+                            </td>
+                            <td>
+                                <input class="form-control" type="number" onchange="apricotTutar()" name=""
+                                    id="apricotNumber" placeholder="Apricot Miktar Giriniz (kg)">
+                            </td>
+                            <td>
+                                <input class="form-control" type="number" onchange="grapeTutar()" name=""
+                                    id="grapeNumber" placeholder="Grape Miktar Giriniz (kg)">
+                            </td>
+                            <td>
+                                <input class="form-control" type="number" onchange="orangeTutar()" name=""
+                                    id="orangeNumber" placeholder="Orange Miktar Giriniz (kg)">
+                            </td>
+                            <td>
+                                <input class="form-control" type="number" onchange="pearTutar()" name="" id="pearNumber"
+                                    placeholder="Pear Miktar Giriniz (kg)">
+                            </td>
+                            <td>
+                                <input class="form-control" type="number" onchange="watermelonTutar()" name=""
+                                    id="watermelonNumber" placeholder="Watermelon Miktar Giriniz (kg)">
+                            </td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1 class="text-danger text-center">
+                                <div class="text-center">
+                                    <div class="spinner-border" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </div>
+                            </h1>
+                        </td>
+                        <td>
+                            <h1 class="text-danger text-center">
+                                <div class="text-center">
+                                    <div class="spinner-border" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </div>
+                            </h1>
+                        </td>
+                        <div>
+                            <td colspan="2">
+                                <center><label for="karOrani">Kar Oranı Giriniz: </label></center>
+                                <center><input class="form-control" type="number" onchange="karOraniGirildi()" name=""
+                                        id="karOrani" width="300" placeholder="kar orani giriniz (%)"></center>
+                            </td>
+                        </div>
+                        <td>
+                            <h1 class="text-danger text-center">
+                                <div class="text-center">
+                                    <div class="spinner-border" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </div>
+                            </h1>
+                        </td>
+                        <td>
+                            <h1 class="text-danger text-center">
+                                <div class="text-center">
+                                    <div class="spinner-border" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </div>
+                            </h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">
+                            <h1 class="text-danger  text-center">
+                                <div id="sonuc" class="shadow p-2 rounded rounded-circle"></div>
+                            </h1>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script> <!-- javascript dosyalarım -->
+    <!--  Bundan sonraki üc satir makyaj kodlaridir -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script> 
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
